@@ -6,7 +6,14 @@ class Book(models.Model):
     title = models.CharField(max_length=150)
     author = models.CharField(max_length=150)
     release_year = models.PositiveIntegerField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    is_rented = models.BooleanField(null=False, default=False)
+    renter = models.ForeignKey(
+        User,
+        on_delete=models.RESTRICT,
+        null=True,
+        blank=True,
+        default=None,
+    )
 
     def __str__(self) -> str:
         return f'{self.title}. {self.author}'
@@ -14,6 +21,7 @@ class Book(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=['title', 'author', 'release_year'], name='unique_together_book_keys'
+                fields=['title', 'author', 'release_year'],
+                name='unique_together_book_keys',
             )
         ]

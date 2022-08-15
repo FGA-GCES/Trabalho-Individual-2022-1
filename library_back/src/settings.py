@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'knox',
+    'corsheaders',
     'books',
 ]
 
@@ -50,7 +52,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'src.urls'
 
@@ -125,9 +130,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-   'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework.authentication.TokenAuthentication',
-   ),
-   'DEFAULT_PERMISSION_CLASSES': ( 'rest_framework.permissions.AllowAny', ),
-}
+# REST_FRAMEWORK = {
+#    'DEFAULT_AUTHENTICATION_CLASSES': (
+#        'rest_framework.authentication.TokenAuthentication',
+#    ),
+#    'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticated'
+#    ),
+# }

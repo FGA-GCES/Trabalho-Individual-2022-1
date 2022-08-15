@@ -19,14 +19,12 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from books.views import BookViewSet
-from rest_framework.authtoken.views import obtain_auth_token
 
 router = routers.DefaultRouter()
-router.register(r'books', BookViewSet)
+router.register(r'books', BookViewSet, basename='books')
 
 urlpatterns = [
     path('api/', include(router.urls)),
     path("auth/", include("accounts.urls")),
-    path('auth/login/', obtain_auth_token),
     path('admin/', admin.site.urls),
 ]
