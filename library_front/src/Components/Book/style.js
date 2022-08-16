@@ -9,15 +9,16 @@ export const Background = styled.div`
   border: 3px solid #1F3541;
   box-sizing: border-box;
   border-radius: 15px;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  margin-left: 15px;
 `;
 
 export const BookDiv = styled.div`
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    @media(max-width: 750px){
+  justify-content: space-between;
+  padding: 5px;
+  display: flex;
+  @media(max-width: 750px){
     width: 100vw;
     box-shadow: 0;
     border-radius: 0;

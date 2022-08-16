@@ -69,8 +69,8 @@ export const Center = styled.div`
     border: 3px solid #1F3541;
     box-sizing: border-box;
     border-radius: 15px;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     @media(max-width: 750px){
     width: 100vw;
     box-shadow: 0;

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../Components/Button';
-import { Center } from '../Login/Style';
-import { Background } from './Style';
+import { Background, Center, BooksList, ServicesBook } from './Style';
 import { getBooks } from '../../Services/Axios/bookService';
 import Book from '../../Components/Book';
 
 
 const Home = () => {
-    
     const [books, setBooks] = useState([]);
     
     const navigate = useNavigate();
@@ -45,10 +43,14 @@ return(
             <h1>
                 Livros disponíveis
             </h1>
-            <Button title="Doar livro" type="side" changeButton={donate}/>
-            <Button title="Alugar livro" type="side" changeButton={donate}/>
+            <ServicesBook>
+                <Button title="Doar livro" type="side" changeButton={donate}/>
+                <Button title="Alugar livro" type="side" changeButton={donate}/>
+            </ServicesBook>
         <Center>
+            <BooksList>
                 {listBooks}
+            </BooksList>
         </Center>
     </Background>
     )

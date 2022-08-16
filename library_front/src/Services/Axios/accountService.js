@@ -32,7 +32,7 @@ export async function login(
     return response;
   } catch (error) {
     if (error.response.status !== 401) {
-      alert('Não foi possivel realizar o cadastro. Tente novamente mais tarde');
+      alert('Não foi possivel realizar o Login. Tente novamente mais tarde');
     }
     console.error(`An unexpected error ocourred while creating a new client.${error}`);
   }

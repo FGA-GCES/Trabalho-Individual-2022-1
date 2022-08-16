@@ -11,19 +11,31 @@ export const Background = styled.div`
 `;
 
 export const Center = styled.div`
-    width: 90%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    background: #FFFFFF;
-    border: 3px solid #1F3541;
-    box-sizing: border-box;
-    border-radius: 15px;
-    margin-top: 15vh;
-    margin-bottom: 10vh;
-    @media(max-width: 750px){
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 3px solid #1F3541;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  @media(max-width: 750px){
     width: 100vw;
     box-shadow: 0;
     border-radius: 0;
   }
+`;
+
+export const BooksList = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+`;
+
+export const ServicesBook = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 `;

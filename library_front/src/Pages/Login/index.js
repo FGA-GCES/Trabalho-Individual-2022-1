@@ -18,8 +18,8 @@ const LoginScreen = () => {
       passwordReceived, 
     ).then((response) => response.data)
     if (data) {
-      console.log(data.token)
-      localStorage.setItem('app-token', data.token)
+      localStorage.setItem('app-token', data.token);
+      window.location.reload(); 
       return navigate('/');
     }
   }

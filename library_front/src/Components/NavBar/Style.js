@@ -9,13 +9,14 @@ const styles = {
     height: '75px',
     alignItems: 'center',
     display: 'flex',
+    width: '100%',
+    justifyContent: 'space-around',
   },
 
   navbarText: {
-    justifyContent: 'space-between',
     fontFamily: 'Montserrat',
     fontSize: '2vh',
-    marginRight: '2vh',
+    marginLeft: '2vh',
     fontWeight: 'bold',
     color: 'white',
   },

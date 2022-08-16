@@ -28,11 +28,35 @@ export async function getBooks() {
       return response;
     } catch (error) {
       if (error.response?.status === 500) {
-        alert('O tempo da sua sessão expirou, faça o login novamente');
-      } else if (error.response?.status !== 401) {
-        alert('Não foi possível obter a lista de clientes, tente novamente mais tarde.');
+        alert('Você não está logado, por favor faça o seu login na aplicação.');
       }
       console.error(`An unexpected error ocourred while retrieving the clients list.${error}`);
     }
     return false;
   }
+
+export async function rentBooks() {
+  try {
+    const response = await BASE_API.get('/api/books/rent/');
+    return response;
+  } catch (error) {
+    if (error.response?.status === 500) {
+      alert('Você não está logado, por favor faça o seu login na aplicação.');
+    }
+    console.error(`An unexpected error ocourred while retrieving the clients list.${error}`);
+  }
+  return false;
+}
+
+export async function rentUserBooks() {
+  try {
+    const response = await BASE_API.get('/api/books/?query_params/');
+    return response;
+  } catch (error) {
+    if (error.response?.status === 500) {
+      alert('Você não está logado, por favor faça o seu login na aplicação.');
+    }
+    console.error(`An unexpected error ocourred while retrieving the clients list.${error}`);
+  }
+  return false;
+}

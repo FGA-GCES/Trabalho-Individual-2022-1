@@ -16,7 +16,7 @@ const Book = ({
             Ano: {release_year}
         </BookDiv>
         <BookDiv>
-            Alugado: {is_rented ? "sim" : "não"  }
+            Alugado: {is_rented ? "Sim" : "Não"  }
         </BookDiv>
     </Background>
 )
