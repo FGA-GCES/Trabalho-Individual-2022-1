@@ -35,9 +35,11 @@ export async function getBooks() {
     return false;
   }
 
-export async function rentBooks() {
+export async function rentBooks(bookId, renterId) {
   try {
-    const response = await BASE_API.get('/api/books/rent/');
+    const response = await BASE_API.post(`/api/books/${bookId}/rent/`, {
+      renter: renterId,
+    });
     return response;
   } catch (error) {
     if (error.response?.status === 500) {

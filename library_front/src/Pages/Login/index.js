@@ -19,6 +19,7 @@ const LoginScreen = () => {
     ).then((response) => response.data)
     if (data) {
       localStorage.setItem('app-token', data.token);
+      localStorage.setItem('app-userID', data.user.id);
       window.location.reload(); 
       return navigate('/');
     }
