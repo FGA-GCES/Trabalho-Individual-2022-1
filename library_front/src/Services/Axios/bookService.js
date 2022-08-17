@@ -14,7 +14,7 @@ export async function createBook(
       if (error.response.status === 500) {
         alert('Você precisa estar logado para doar um livro');
       } else if (error.response.status !== 401) {
-        alert('Não foi possivel realizar o cadastro. Tente novamente mais tarde');
+        alert('Não foi possivel realizar o cadastro do livro.');
       }
       console.error(`An unexpected error ocourred while creating a new client.${error}`);
     }
@@ -50,9 +50,9 @@ export async function rentBooks(bookId, renterId) {
   return false;
 }
 
-export async function rentUserBooks() {
+export async function rentedUserBooks(renterId) {
   try {
-    const response = await BASE_API.get('/api/books/?query_params/');
+    const response = await BASE_API.get(`/api/books/?renter=${renterId}`);
     return response;
   } catch (error) {
     if (error.response?.status === 500) {

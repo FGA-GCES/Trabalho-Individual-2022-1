@@ -34,7 +34,7 @@ const Donate = () => {
 
   useCallback(() => {
     createBook();
-  }, [localStorage.getItem('app-token')]);
+  }, [sessionStorage.getItem('app-token')]);
 
   return (
     <Background>
