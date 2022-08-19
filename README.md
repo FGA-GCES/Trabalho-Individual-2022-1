@@ -66,13 +66,13 @@ A etapa final do trabalho deverá ser realizada à partir do deploy automático 
 
 ## Avaliação
 
-A avaliação do trabalho será feita à partir da correta implementação de cada etapa 1 a 6. A avaliação será feita de maneira quantitativa (se foi realizado a implementação + documentação), e qualitativa (como foi implementado, entendimento dos conceitos na prática, complexidade da solução). Para isso, faça os commits atômicos, bem documentados, completos a fim de facilitar o entendimento e avaliação do seu trabalho. Lembrando o trabalho é individual.
+A avaliação do trabalho será feita à partir da correta implementação de cada etapa 1 a 6. A avaliação será feita de maneira **quantitativa** (se foi realizado a implementação + documentação), e **qualitativa** (como foi implementado, entendimento dos conceitos na prática, complexidade da solução). Para isso, faça os **commits atômicos, bem documentados, completos** a fim de facilitar o entendimento e avaliação do seu trabalho. Lembrando o trabalho é individual.
 
 Obsercações: 
 1. A data final de entrega do trabalho é o dia 04/09/2022;
-2. O trabalho deve ser desenvolvido em um repositório pessoal e privado que deverá ser tornado público somente após a data de entrega do trabalho (no dia 05/09/2022);
+2. O trabalho deve ser desenvolvido em um **repositório PESSOAL e PRIVADO** que deverá ser tornado público somente após a data de entrega do trabalho (no dia 05/09/2022);
 3. Cada etapa do trabalho deverá ser entregue em commits progressivos (pendendo ser mais de um commit por etapa);
-4. Os commits devem estar espaçados em dias ao longo do desenvolvimento do trabalho. Commits feitos todos juntos na data de entrega não serão descontados da nota final.
+4. Os **commits devem estar espaçados em dias ao longo do desenvolvimento do trabalho**. Commits feitos todos juntos na data de entrega não serão descontados da nota final.
 
 | Item | Peso |
 |---|---|
