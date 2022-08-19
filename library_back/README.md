@@ -2,6 +2,11 @@
 Este serviço representa um simples sistema de CRUD de livros e autenticação de usuários.
 Todas as rotas do serviço estão descritas neste documento e, o processo para executar o mesmo também.
 
+## Dependências do projeto
+Para rodar o projeto, antes é necessário criar uma instância de banco de dados postgres em sua máquina, ou então, dockerizada.
+
+Após inicializar o servidor postgres, crie um banco nomeado ```library_db``` e o deixe disponível para conexões.
+
 ## Rodando o projeto
 Para rodar o projeto, é necessário instalar as dependências relativas ao serviço,
 sugere-se primeiro a criação de um ambiente virtual por meio dos comando:
